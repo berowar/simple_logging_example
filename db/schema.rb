@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110929123827) do
+ActiveRecord::Schema.define(:version => 20110929142356) do
+
+  create_table "my_changes_loggings", :force => true do |t|
+    t.integer  "logable_id"
+    t.string   "logable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "products", :force => true do |t|
     t.string   "title"
